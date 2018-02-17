@@ -1,0 +1,36 @@
+.team
+  margin-top: 80px
+
+  &__header
+    margin-bottom: 15px
+
+  &__text
+    margin-bottom: 10px
+    font-size: 15px
+
+  &__items
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+  &__item
+    margin-top: 20px
+    font-size: 13px
+    text-align: center
+    color: #191919
+
+  &__photo
+    margin-bottom: 15px
+    width: 130px
+    height: 140px
+    background-position: 0 -10px
+    background-size: cover
+    filter: grayscale(1)
+
+  @for $i from 1 to 4
+    &__photo-#{$i}
+      background-image: url('../img/team-photo-#{$i}.png')
+
+  &__name
+    font-size: 14px
+    margin-bottom: 5px

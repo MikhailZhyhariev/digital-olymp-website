@@ -1,13 +1,3 @@
-Шаблон для вертски по методологии БЭМ.
+Digital Olymp website
 
-Блоки располагаются в папке src.
-
-Собранная верстка располагается в папке public.
-
-npm start - запуск локального сервера. Поддерживается автоматическая пересборка и перезагрузка страницы.
-
-npm install - установить node-модули необходимые для работы.
-
-npm run build - сделать production сборку
-
-npm run deploy - deploy production сборки на github. 
+BEM Methodology, GULP, SASS
