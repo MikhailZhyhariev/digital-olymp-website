@@ -1,0 +1,21 @@
+{
+  "name": "digital olymp",
+  "description": "BEM-Metodology template",
+  "main": "index.html",
+  "authors": [
+    "Mikhail Zhyhariev"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  }
+}

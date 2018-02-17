@@ -1,11 +1,10 @@
 {
-  "name": "template-bem",
+  "name": "digital_olymp_template",
   "version": "1.0.0",
   "description": "BEM-Metodology template",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/gulp/bin/gulp.js dev",
-    "build": "NODE_ENV=\"production\" ./node_modules/gulp/bin/gulp.js build",
+    "start": "./node_modules/gulp/bin/gulp.js",
     "deploy": "./node_modules/gulp/bin/gulp.js deploy"
   },
   "author": "Mikhail Zhyhariev",
@@ -17,18 +16,12 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-clean-css": "^3.9.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-debug": "^3.1.0",
-    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "gulp-series": "^1.0.2",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-uglifycss": "^1.0.9",
-    "gulp-watch": "^4.3.11",
-    "imagemin-pngquant": "^5.0.1",
-    "node-static": "^0.7.10"
+    "imagemin-pngquant": "^5.0.1"
   }
 }

@@ -95,11 +95,11 @@ gulp.task('build', gulp.series(
 ))
 
 gulp.task('watch', function() {
-  gulp.watch(path.src.html, gulp.series('html:build'));
-  gulp.watch(path.src.style, gulp.series('style:build'));
-  gulp.watch(path.src.js, gulp.series('js:build'));
-  gulp.watch(path.src.img, gulp.series('img:build'));
-  gulp.watch(path.src.fonts, gulp.series('fonts:build'));
+  gulp.watch(path.watch.html, gulp.series('html:build'));
+  gulp.watch(path.watch.style, gulp.series('style:build'));
+  gulp.watch(path.watch.js, gulp.series('js:build'));
+  gulp.watch(path.watch.img, gulp.series('img:build'));
+  gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
 });
 
 gulp.task('webserver', function() {
@@ -111,6 +111,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('default', gulp.series('build', gulp.parallel('webserver', 'watch')));
+// gulp.task('default', gulp.parallel('webserver', 'watch'));
 
 gulp.task('deploy', function() {
   return ghpages.publish('build', function(err) {});
