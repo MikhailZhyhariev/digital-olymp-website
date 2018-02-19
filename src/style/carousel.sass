@@ -1,0 +1,32 @@
+.carousel
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  width: 100%
+
+  &__button
+    width: 12px
+    align-self: center
+
+    &:hover
+      cursor: pointer
+
+  &__wrapper
+    width: 230px
+    overflow: hidden
+
+  &__list
+    margin: 0
+    padding: 0
+    display: flex
+    list-style: none
+    width: 9999px
+    transition: margin 0.5s ease-in-out
+
+  &__item
+    padding-left: 10px
+    align-self: center
+    height: 29px
+
+  &__image
+    height: inherit
