@@ -1,0 +1,37 @@
+.menu
+  position: relative
+
+  &__button
+
+  &__list
+    margin: 0
+    padding: 0
+    list-style: none
+    position: absolute
+    background-color: white
+    border: 1px solid #000
+
+  &__item
+    padding: 5px 10px
+
+    &:last-child
+      border-top: 1px solid #000
+
+  &__link
+    font-size: 14px
+    color: #000
+    text-decoration: none
+    text-transform: uppercase
+
+  &__triangle
+    width: 8px
+    height: 8px
+    transform: rotate(45deg)
+    background-color: #fff
+    border-top: 1px solid #000
+    border-left: 1px solid #000
+    font-size: 0
+    position: absolute
+    top: -5px
+    left: 0
+    z-index: 2

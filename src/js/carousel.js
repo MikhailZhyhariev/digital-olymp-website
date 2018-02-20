@@ -1,10 +1,14 @@
-var carousel = document.querySelector('.carousel');
-var list = carousel.querySelector('ul');
+;(function () {
+  var carousel = document.querySelector('.carousel');
+  var list = carousel.querySelector('ul');
 
-carousel.querySelector('#prev').onclick = function() {
-    list.style.marginLeft = 0;
-}
+  if (window.innerWidth < 768) {
+    carousel.querySelector('#prev').onclick = function() {
+        list.style.marginLeft = 0;
+    }
 
-carousel.querySelector('#next').onclick = function() {
-    list.style.marginLeft = -230 + 'px'
-}
+    carousel.querySelector('#next').onclick = function() {
+        list.style.marginLeft = -242 + 'px'
+    }
+  }
+})();

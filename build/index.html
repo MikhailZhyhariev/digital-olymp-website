@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
     <title></title>
   </head>
   <link rel="stylesheet" href="/css/style.css">
@@ -11,12 +12,27 @@
       <div class="container">
         <a href="index.html"><img class="header__logo" src="../img/logo.png" alt="digital olymp"></a>
         <div class="header__buttons">
-          <!-- //= menu.html -->
-          <button class="button header__user"></button>
-          <button class="button header__phone"></button>
+          <div class="menu ">
+            <img class="menu__button header__image" src="../img/menu.png" alt="menu">
+            <ul class="menu__list">
+              <div class="menu__triangle"></div>
+              <li class="menu__item text_light"><a class="menu__link" href="">О&nbsp;компании</a></li>
+              <li class="menu__item text_light"><a class="menu__link" href="">Портфолио</a></li>
+            </ul>
+          </div>
+          <a class="header__link"><img class="header__image" src="../img/user.png" alt="user"></a>
+          <a class="header__link"><img class="header__image" src="../img/phone.png" alt="phone"></a>
         </div>
       </div>
     </header>
+    <section class="promo">
+      <div class="container">
+        <h1 class="promo__header text text_header">Digital olymp</h1>
+        <h2 class="promo__text text text_light">Создание новых и поддержка сайтов</h2>
+        <a class="promo__button button text text_default" href="#">Заказать</a>
+        <img class="promo__image" src="../img/promo-macbook.png" alt="">
+      </div>
+    </section>
     <section class="features">
       <div class="container">
         <div class="features__item text_default">
@@ -49,7 +65,7 @@
             <img class="portfolio__image" src="../img/portfolio__item-mobil-one-4.png" alt="Специальный проект для mobil 1">
           </div>
         </div>
-        <button class="portfolio__button button text_default">Все проекты</button>
+        <a class="portfolio__button button text_default">Все проекты</a>
       </div>
     </section>
     <section class="work">
@@ -93,6 +109,21 @@
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_part">
+          <img class="footer__logo" src="../img/logo.png" alt="Digital Olymp">
+          <p class="footer__copyright text text_light">Copyright © 2016 All Rights Reserved by digitalolymp.com</p>
+        </div>
+        <div class="footer__part">
+          <img class="footer__image" src="../img/phone.png" alt="phone">
+          <p class="footer__phone text text_default">+7 495 227 36 94</p>
+          <a class="footer__link text text_default-bold" href="#">Ru</a>
+          <a class="footer__link text text_default-bold" href="#">De</a>
+        </div>
+      </div>
+    </footer>
+
 
     <script src="/js/bundle.js"></script>
   </body>

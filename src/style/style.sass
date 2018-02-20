@@ -1,12 +1,12 @@
 @import "../../bower_components/normalize.css/normalize"
 
 .container
-  width: 280px
   margin: 0 auto
+  width: 87.5%
 
-// @media (max-width: 1920px)
-//   .container
-//     width: 1200px
+@media (min-width: 768px)
+  .container
+    width: 1200px
 
 @import "fonts.sass"
 
@@ -14,7 +14,11 @@
 
 @import "button.sass"
 
+@import "menu.sass"
+
 @import "header.sass"
+
+@import "promo.sass"
 
 @import "features.sass"
 
@@ -25,3 +29,5 @@
 @import "carousel.sass"
 
 @import "team.sass"
+
+@import "footer.sass"

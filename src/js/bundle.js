@@ -1,1 +1,2 @@
 //= carousel.js
+//= menu.js

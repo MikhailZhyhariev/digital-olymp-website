@@ -2,18 +2,26 @@
   text-align: center
   margin-top: 80px
 
+  .container
+    display: flex
+    flex-direction: column
+
   &__header
     text-align: left
     margin-bottom: 30px
 
   &__items
+    margin: 0
+    padding: 0
     display: flex
     flex-flow: row wrap
 
   &__item
+    padding: 0
+    margin: 0
     display: flex
     flex-flow: row wrap
-    align-self: center
+    align-self: flex-end
     max-width: 100%
 
   &__image
@@ -22,7 +30,23 @@
 
   &__button
     margin-top: 30px
+    align-self: center
     padding: 17px 39px
+    padding-bottom: 15px
     border: 1px solid #38aae2
     border-radius: 1px
     color: #38aae2
+    user-select: none
+
+@media (min-width: 768px) and (max-width: 1920px)
+  .portfolio
+    margin-top: 100px
+
+    &__header
+      margin-bottom: 50px
+
+    &__items
+      flex-wrap: nowrap
+
+    &__button
+      margin-top: 60px
