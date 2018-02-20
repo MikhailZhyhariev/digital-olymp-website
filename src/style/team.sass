@@ -1,10 +1,14 @@
 .team
   margin-top: 80px
 
+  .container
+    display: flex
+    flex-direction: column
+
   &__header
     margin-bottom: 15px
 
-  &__text
+  &__about
     margin-bottom: 10px
     font-size: 15px
 
@@ -17,7 +21,7 @@
     margin-top: 20px
     font-size: 13px
     text-align: center
-    color: #191919
+    color: #858585
 
   &__photo
     margin-bottom: 15px
@@ -32,5 +36,40 @@
       background-image: url('../img/team-photo-#{$i}.png')
 
   &__name
+    color: #191919
     font-size: 14px
     margin-bottom: 5px
+
+@media (min-width: 768px)
+  .team
+    margin-top: 125px
+
+    .container
+      flex-direction: row
+
+    &__header
+      margin-top: 30px
+      margin-bottom: 40px
+      font-size: 50px
+
+    &__about
+      font-size: 18px
+
+    &__items
+      align-self: flex-end
+      justify-content: flex-start
+      flex-wrap: nowrap
+      margin-left: 30px
+
+    &__item
+      margin-top: 0
+      margin-left: 10px
+      font-size: 15px
+
+    &__name
+      font-size: 18px
+
+    &__photo
+      width: 245px
+      height: 330px
+      background-position: 0
