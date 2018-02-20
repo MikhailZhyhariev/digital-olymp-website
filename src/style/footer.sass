@@ -9,8 +9,9 @@
     justify-content: space-between
 
   &__part
-    width: 100%
+    width: auto
     display: flex
+    flex-wrap: wrap
     align-items: center
     justify-content: space-between
 
@@ -42,3 +43,20 @@
     &:hover
       color: #fff
       text-decoration: underline
+
+
+@media (min-width: 768px)
+  .footer
+    padding: 20px 0 30px 0
+
+    &__part
+      width: auto
+      justify-content: flex-start
+
+    &__logo
+      width: auto
+
+    &__copyright
+      margin: 0
+      margin-left: 30px
+      align-self: flex-end
