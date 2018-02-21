@@ -9,10 +9,11 @@
     justify-content: space-between
 
   &__part
-    width: auto
+    width: 100%
     display: flex
     flex-wrap: wrap
     align-items: center
+    position: relative
     justify-content: space-between
 
   &__logo
@@ -28,8 +29,20 @@
   &__phone
     font-size: 15px
     color: #fff
-    margin-right: 50px
-    margin-left: 8px
+    margin-left: 40px
+    margin-top: 10px
+
+    &::before
+      width: 32px
+      height: 31px
+      content: ''
+      background-image: url('../img/phone.png')
+      position: absolute
+      top: 0
+      left: 0
+
+  &__lang
+    margin-top: 9px
 
   &__link
     color: #9cd5f1
@@ -53,6 +66,21 @@
       width: auto
       justify-content: flex-start
 
+      &:last-child
+        justify-content: flex-end
+
+    &__lang
+      margin-top: 17px
+      margin-left: 50px
+      align-self: flex-start
+
+    &__phone
+      margin-top: 17px
+      align-self: flex-start
+
+      &::before
+        top: 8px
+
     &__logo
       width: auto
 
@@ -60,3 +88,6 @@
       margin: 0
       margin-left: 30px
       align-self: flex-end
+
+    &__link
+      font-size: 16px
