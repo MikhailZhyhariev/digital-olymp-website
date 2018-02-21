@@ -4,7 +4,7 @@
   var button = menu.querySelector('.menu__button');
   var triangle = menu.querySelector('.menu__triangle');
 
-  if (window.innerWidth < 1200) {
+  if (window.innerWidth < 768) {
     var listCoord = list.getBoundingClientRect();
     var buttonCoord = button.getBoundingClientRect();
     var triangleCoord = triangle.getBoundingClientRect();

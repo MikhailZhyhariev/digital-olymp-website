@@ -111,7 +111,6 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('default', gulp.series('build', gulp.parallel('webserver', 'watch')));
-// gulp.task('default', gulp.parallel('webserver', 'watch'));
 
 gulp.task('deploy', function() {
   return ghpages.publish('build', function(err) {});
