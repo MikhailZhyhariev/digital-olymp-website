@@ -35,3 +35,33 @@
     top: -5px
     left: 0
     z-index: 2
+
+@media (min-width: 1200px)
+  .menu
+    width: 100%
+
+    &__triangle
+      display: none
+
+    &__button
+      display: none
+
+    &__list
+      position: static
+      display: flex
+      background-color: inherit
+      border: none
+
+    &__item
+      padding: 0
+
+      &:last-child
+        border: none
+        margin-left: 45px
+
+    &__link
+      color: #afddf3
+
+      &:hover
+        text-decoration: underline
+        color: #fff

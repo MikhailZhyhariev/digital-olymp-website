@@ -5,7 +5,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    padding: 19px 0
+    padding: 20px 0
     border-bottom: 1px solid #60bbe8
 
   &__logo
@@ -14,13 +14,10 @@
 
   &__buttons
     height: 20px
-    // flex-basis: 90px
-    flex-basis: 100%
+    flex-basis: 90px
     align-items: center
     display: flex
     justify-content: space-between
-
-    border: 1px solid black
 
   &__image
     width: 20px
@@ -29,3 +26,23 @@
 
     &:hover
       cursor: pointer
+
+  &__phone
+    display: none
+
+@media (min-width: 1200px)
+  .header
+    &__phone
+      margin-left: 9px
+      display: block
+      color: white
+      font-size: 15px
+      flex-shrink: 0
+
+    &__buttons
+      height: auto
+      flex-basis: 100%
+
+    &__image
+      width: auto
+      margin-left: 30px
