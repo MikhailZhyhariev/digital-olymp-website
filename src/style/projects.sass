@@ -1,0 +1,103 @@
+.projects
+  padding: 80px 0
+  position: relative
+
+  &__header
+    color: white
+    font-size: 24px
+    margin-bottom: 50px
+
+  &__item
+    display: flex
+    flex-flow: row wrap
+    margin-top: 50px
+
+  &__image
+    width: 100%
+    align-self: center
+
+  &__description
+    width: 100%
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+    color: #191919
+
+  &__link
+    color: #313131
+    opacity: 0.5
+    font-size: 14px
+
+  &__name
+    font-size: 20px
+    margin-top: 15px
+    margin-bottom: 15px
+    text-align: center
+    color: inherit
+
+  &__text
+    font-size: 14px
+    margin-bottom: 15px
+    color: inherit
+
+@media (min-width: 1024px)
+  .projects
+    padding-top: 60px
+    padding-bottom: 100px
+
+    &__header
+      font-size: 28px
+
+    &__item
+      margin-top: 130px
+      justify-content: space-between
+
+      &:nth-child(2n)
+        flex-direction: row-reverse
+
+
+      &:first-child
+        margin-top: 0
+
+        .projects
+          &__description
+            color: white
+
+          &__button
+            color: white
+            border-color: white
+
+          &__link
+            color: inherit
+
+    &__image
+      width: 55%
+
+    &__description
+      margin-top: 30px
+      width: 40%
+      box-sizing: border-box
+
+    &__link
+      font-size: 18px
+
+    &__name
+      margin-top: 40px
+      margin-bottom: 30px
+      font-size: 28px
+      text-align: left
+
+    &__text
+      font-size: 18px
+      margin-bottom: 35px
+
+@media (min-width: 1600px)
+  .projects
+    &__header
+      font-size: 30px
+
+    &__name
+      font-size: 30px
+
+    &__description
+      margin-top: 50px
