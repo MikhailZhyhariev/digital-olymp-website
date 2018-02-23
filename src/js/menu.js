@@ -14,13 +14,13 @@
     list.style.top = 30 + 'px';
 
     triangle.style.left = (listCoord.width - triangleCoord.width) / 2 + 'px';
-
-    button.onclick = function() {
-      if (list.style.display == 'none') {
-        list.style.display = 'block';
-      } else {
-        list.style.display = 'none';
-      }
-    };
   }
+
+  button.onclick = function() {
+    if (list.style.display == 'none') {
+      list.style.display = 'block';
+    } else {
+      list.style.display = 'none';
+    }
+  };
 })();
