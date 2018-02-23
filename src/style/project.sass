@@ -39,6 +39,8 @@
     text-align: center
 
   &__conversion
+    display: flex
+    flex-flow: row wrap
     margin-bottom: 80px
 
   &__plot
@@ -50,6 +52,7 @@
       &__text
         width: auto
         margin: 0
+        font-size: 15px
 
   &__plot-1
     margin-top: 40px
@@ -69,7 +72,7 @@
 
   &__mockup
     width: 63%
-    height: 140px
+    height: 135px
     overflow: hidden
     text-align: left
 
@@ -133,3 +136,98 @@
     top: 160px
     left: -63vw
     z-index: -1
+
+@media (min-width: 767px)
+  .project
+    &__conversion
+      margin-bottom: 120px
+
+    &__mockup
+      width: 40%
+
+    &__mockup-image
+      width: auto
+      margin-top: -200px
+      margin-left: 120px
+      transform: none
+
+    &__link
+      margin-bottom: 50px
+      font-size: 18px
+
+@media (min-width: 1200px)
+  .project
+    .container
+      padding: 60px 0 100px 0
+
+    &__header
+      font-size: 30px
+      margin-bottom: 30px
+
+    &__description
+      display: flex
+      flex-direction: column
+      margin-bottom: 70px
+
+      .project
+        &__image
+          width: 707px
+
+    &__image
+      width: auto
+      margin-bottom: 65px
+      align-self: center
+
+    &__text
+      font-size: 16px
+      margin-bottom: 30px
+
+    &__conversion
+      flex-wrap: nowrap
+
+      .project
+        &__text
+          text-align: left
+          width: auto
+
+          span
+            display: none
+
+        &__image
+          margin: 0
+          width: auto
+
+    &__conversion-text
+      width: 100%
+
+    &__plot-1
+      margin-top: 50px
+      margin-bottom: 30px
+      width: 73%
+
+    &__plot-2
+      width: 73%*0.85
+
+    &__background-top
+      height: 50px
+
+      &::after
+        top: 50px
+        border-top: 735px solid #38aae2
+
+    &__background-bottom
+      height: 1px
+
+      &::after
+        bottom: 1px
+        border-bottom: 925px solid #38aae2
+
+    &__lines
+      width: 100%
+      left: 0
+      top: 0
+
+@media (min-width: 1600px)
+  .project
+    &__text
+      font-size: 18px
