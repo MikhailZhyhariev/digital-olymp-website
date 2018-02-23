@@ -1,7 +1,6 @@
 .menu
   position: relative
-
-  &__button
+  z-index: 1000
 
   &__list
     margin: 0
@@ -12,12 +11,12 @@
     border: 1px solid #000
 
   &__item
-    padding: 5px 10px
-
     &:last-child
       border-top: 1px solid #000
 
   &__link
+    padding: 5px 10px
+    display: inline-block
     font-size: 14px
     color: #000
     text-decoration: none
