@@ -1,6 +1,7 @@
 'use strict'
 
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var prefixer = require('gulp-autoprefixer');
 var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
@@ -8,10 +9,15 @@ var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
 var cssmin = require('gulp-clean-css');
 var imagemin = require('gulp-imagemin');
+var htmlmin = require('gulp-htmlmin');
+var gulpIf = require('gulp-if');
 var pngquant = require('imagemin-pngquant');
 var del = require('del');
 var browserSync = require('browser-sync');
 var ghpages = require('gh-pages');
+var critical = require('critical');
+
+var isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
 var path = {
   build: {
@@ -47,19 +53,19 @@ gulp.task('html:build', function() {
 gulp.task('js:build', function() {
   return gulp.src(path.src.js)
              .pipe(rigger())
-             .pipe(sourcemaps.init())
-             .pipe(uglify())
-             .pipe(sourcemaps.write())
+             .pipe(gulpIf(isDevelopment, sourcemaps.init()))
+             .pipe(gulpIf(!isDevelopment, uglify()))
+             .pipe(gulpIf(isDevelopment, sourcemaps.write()))
              .pipe(gulp.dest(path.build.js))
 });
 
 gulp.task('style:build', function() {
   return gulp.src(path.src.style)
-             .pipe(sourcemaps.init())
+             .pipe(gulpIf(isDevelopment, sourcemaps.init()))
              .pipe(sass())
              .pipe(prefixer())
-             .pipe(cssmin())
-             .pipe(sourcemaps.write())
+             .pipe(gulpIf(!isDevelopment, cssmin()))
+             .pipe(gulpIf(isDevelopment, sourcemaps.write()))
              .pipe(gulp.dest(path.build.css))
 });
 
@@ -83,16 +89,41 @@ gulp.task('clean', function() {
   return del(path.clean)
 });
 
+gulp.task('critical', function() {
+  return gulp.src('build/*.html')
+             .pipe(critical.stream({
+                inline: true,
+                base: path.build.html,
+                css: [`${path.build.css}style.css`],
+                dimensions: [{
+                  width: 320,
+                  height: 568
+                }, {
+                  width: 768,
+                  height: 510
+                }, {
+                  width: 1920,
+                  height: 540
+                }],
+                minify: true,
+                extract: false,
+                ignore: ['@font-face']
+              }))
+              .pipe(gulpIf(!isDevelopment, htmlmin({collapseWhitespace: true})))
+              .pipe(gulp.dest(path.build.html))
+})
+
 gulp.task('build', gulp.series(
   'clean',
+  'style:build',
   gulp.parallel(
-    'html:build',
     'js:build',
-    'style:build',
+    'html:build',
     'fonts:build',
     'img:build'
-  )
-))
+  ),
+  'critical'
+));
 
 gulp.task('watch', function() {
   gulp.watch(path.watch.html, gulp.series('html:build'));
