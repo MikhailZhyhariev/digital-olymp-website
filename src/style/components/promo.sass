@@ -1,11 +1,6 @@
 .promo
-  background-image: url('../img/background-top.png')
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-
   padding-top: 80px
-  overflow: hidden
+  position: relative
 
   .container
     display: flex
@@ -33,6 +28,35 @@
     margin-bottom: 100px
     width: 340px
 
+  &__background-top
+    width: 100vw
+    height: 315px
+    background-color: #38aae2
+    position: absolute
+    left: 0
+    top: 0
+    content: ''
+    z-index: -1
+
+    &::after
+      border-top: 150px solid #38aae2
+      border-left: 100vw solid transparent
+      position: absolute
+      left: 0
+      top: 315px
+      content: ''
+      z-index: -1
+
+  &__lines
+    width: 245vw
+    height: auto
+    position: absolute
+    top: 180px
+    left: -63vw
+    z-index: -1
+
+
+
 @media (min-width: 768px)
   .promo
     &__header
@@ -43,3 +67,15 @@
 
     &__text
       font-size: 18px
+
+    &__background-top
+      height: 150px
+
+      &::after
+        top: 150px
+        border-top: 735px solid #38aae2
+
+    &__lines
+      width: 100%
+      left: 0
+      top: 60px
