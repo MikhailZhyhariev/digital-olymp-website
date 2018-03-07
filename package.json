@@ -25,10 +25,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "imagemin-pngquant": "^5.0.1"
-  },
-  "dependencies": {
-    "critical": "^1.1.0",
-    "gulp-htmlmin": "^4.0.0"
+    "imagemin-pngquant": "^5.0.1",
+    "gulp-htmlmin": "^4.0.0",
+    "critical": "^1.1.0"
   }
 }
